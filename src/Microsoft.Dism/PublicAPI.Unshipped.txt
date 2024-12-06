@@ -1,1 +1,15 @@
 ﻿#nullable enable
+Microsoft.Dism.DismOsInfo
+Microsoft.Dism.DismOsInfo.Architecture.get -> Microsoft.Dism.DismProcessorArchitecture
+Microsoft.Dism.DismOsInfo.BootDrive.get -> string!
+Microsoft.Dism.DismOsInfo.Equals(Microsoft.Dism.DismOsInfo? other) -> bool
+Microsoft.Dism.DismOsInfo.OsState.get -> Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsInfo.ProductVersion.get -> System.Version!
+Microsoft.Dism.DismOsInfo.WindowsDirectory.get -> string!
+Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsState.Invalid = 4294967295 -> Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsState.Offline = 0 -> Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsState.Online = 1 -> Microsoft.Dism.DismOsState
+override Microsoft.Dism.DismOsInfo.Equals(object? obj) -> bool
+override Microsoft.Dism.DismOsInfo.GetHashCode() -> int
+static Microsoft.Dism.DismApi.GetOsInfo(Microsoft.Dism.DismSession! session) -> Microsoft.Dism.DismOsInfo!
