@@ -1,13 +1,27 @@
 ﻿#nullable enable
 const Microsoft.Dism.DismApi.DISMAPI_E_UNKNOWN_PRODUCT = 2147944005 -> uint
 Microsoft.Dism.DismEditionCollection
+Microsoft.Dism.DismOsInfo
+Microsoft.Dism.DismOsInfo.Architecture.get -> Microsoft.Dism.DismProcessorArchitecture
+Microsoft.Dism.DismOsInfo.BootDrive.get -> string!
+Microsoft.Dism.DismOsInfo.Equals(Microsoft.Dism.DismOsInfo? other) -> bool
+Microsoft.Dism.DismOsInfo.OsState.get -> Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsInfo.ProductVersion.get -> System.Version!
+Microsoft.Dism.DismOsInfo.WindowsDirectory.get -> string!
+Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsState.Invalid = 4294967295 -> Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsState.Offline = 0 -> Microsoft.Dism.DismOsState
+Microsoft.Dism.DismOsState.Online = 1 -> Microsoft.Dism.DismOsState
 Microsoft.Dism.DismProductKeyInfo
 Microsoft.Dism.DismProductKeyInfo.Channel.get -> string!
 Microsoft.Dism.DismProductKeyInfo.EditionId.get -> string!
 Microsoft.Dism.DismProductKeyInfo.Equals(Microsoft.Dism.DismProductKeyInfo? other) -> bool
+override Microsoft.Dism.DismOsInfo.Equals(object? obj) -> bool
+override Microsoft.Dism.DismOsInfo.GetHashCode() -> int
 override Microsoft.Dism.DismProductKeyInfo.Equals(object? obj) -> bool
 override Microsoft.Dism.DismProductKeyInfo.GetHashCode() -> int
 static Microsoft.Dism.DismApi.GetCurrentEdition(Microsoft.Dism.DismSession! session) -> string!
+static Microsoft.Dism.DismApi.GetOsInfo(Microsoft.Dism.DismSession! session) -> Microsoft.Dism.DismOsInfo!
 static Microsoft.Dism.DismApi.GetProductKeyInfo(Microsoft.Dism.DismSession! session, string! productKey) -> Microsoft.Dism.DismProductKeyInfo!
 static Microsoft.Dism.DismApi.GetTargetEditions(Microsoft.Dism.DismSession! session) -> Microsoft.Dism.DismEditionCollection!
 static Microsoft.Dism.DismApi.SetEdition(Microsoft.Dism.DismSession! session, string! editionId) -> void
