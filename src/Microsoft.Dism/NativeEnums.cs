@@ -216,6 +216,27 @@ namespace Microsoft.Dism
     }
 
     /// <summary>
+    /// Specifies the state of the OS.
+    /// </summary>
+    public enum DismOsState : uint
+    {
+        /// <summary>
+        /// Indicates that the OS state is invalid.
+        /// </summary>
+        Invalid = 0xffffffff,
+
+        /// <summary>
+        /// Indicates that the OS was mounted from an offline image.
+        /// </summary>
+        Offline = 0,
+
+        /// <summary>
+        /// Indicates that the OS is the host OS.
+        /// </summary>
+        Online = 1,
+    }
+
+    /// <summary>
     /// Specifies the state of a package or a feature.
     /// </summary>
     /// <remarks>
