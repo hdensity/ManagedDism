@@ -8,6 +8,7 @@ Microsoft.Dism.DismProductKeyInfo.Equals(Microsoft.Dism.DismProductKeyInfo? othe
 override Microsoft.Dism.DismProductKeyInfo.Equals(object? obj) -> bool
 override Microsoft.Dism.DismProductKeyInfo.GetHashCode() -> int
 static Microsoft.Dism.DismApi.GetCurrentEdition(Microsoft.Dism.DismSession! session) -> string!
+static Microsoft.Dism.DismApi.GetDefaultProductKey(Microsoft.Dism.DismSession! session) -> string!
 static Microsoft.Dism.DismApi.GetProductKeyInfo(Microsoft.Dism.DismSession! session, string! productKey) -> Microsoft.Dism.DismProductKeyInfo!
 static Microsoft.Dism.DismApi.GetTargetEditions(Microsoft.Dism.DismSession! session) -> Microsoft.Dism.DismEditionCollection!
 static Microsoft.Dism.DismApi.SetEdition(Microsoft.Dism.DismSession! session, string! editionId) -> void
